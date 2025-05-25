@@ -28,6 +28,7 @@ public class CtsCustomerController {
 			CustomerDto customerdto1 = new CustomerDto();
 			customerdto1.setMessage(e.getMessage());
 			return new ResponseEntity<CustomerDto> (customerdto1 ,HttpStatus.INTERNAL_SERVER_ERROR);
+			//Ok git
 		}
 	}
 }
