@@ -160,26 +160,26 @@ public class CtsController {
 //    "email": "alice@example.com",
 //    "salary": 65000.00
 //}
-	@PostMapping("/employee")
-	public ResponseEntity<String> addEmployee(@RequestBody EmployeeDto empDto) throws CtsException {
-		try {
-			int id = ctsservice.addEmp(empDto);
-			return ResponseEntity.ok("New employee of id " + id + " is added");
-		}
-
-		catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-		}
-
-	}
+//	@PostMapping("/employee")
+//	public ResponseEntity<String> addEmployee(@RequestBody EmployeeDto empDto) throws CtsException {
+//		try {
+//			int id = ctsservice.addEmp(empDto);
+//			return ResponseEntity.ok("New employee of id " + id + " is added");
+//		}
+//
+//		catch (Exception e) {
+//			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//		}
+//
+//	}
 	
 	@PostMapping("/employee")
 	public ResponseEntity<String> addEmployee2(@RequestBody String request) throws CtsException {
 		try {
-			ObjectMapper objectMapper = new ObjectMapper(); // Or autowire it
+			ObjectMapper objectMapper = new ObjectMapper(); // string to object
 		    EmployeeDto empDto = objectMapper.readValue(request, EmployeeDto.class);
 		    
-		    String temp = objectMapper.writeValueAsString(empDto);
+		    String temp = objectMapper.writeValueAsString(empDto);//obj to string
 		    System.out.println(temp);
 			int id = ctsservice.addEmp(empDto);
 			return ResponseEntity.ok("New employee of id " + id + " is added");
