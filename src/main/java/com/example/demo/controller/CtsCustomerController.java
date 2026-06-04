@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.dto.CustomerDto;
 import com.example.demo.dto.EmployeeDto;
 import com.example.demo.service.CtsCustomerService;
-
+//customer controller
 //multiple primary key
 @RestController
 @RequestMapping("/customer")
