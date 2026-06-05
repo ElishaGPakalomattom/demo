@@ -1,7 +1,8 @@
 package com.example.demo.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-
+//class of customer dto. 
+//testing the changes on git.
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CustomerDto {
 
