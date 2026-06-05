@@ -7,6 +7,7 @@ import java.util.Objects;
 @Embeddable
 public class CustomerId implements Serializable {
 
+    //Ok
     private Integer customerId;
     private String regionCode;
     private String accountType;
