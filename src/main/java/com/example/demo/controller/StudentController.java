@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.example.demo.dto.StudentDto;
 import com.example.demo.service.StudentService;
-
+//student controller class
 @RestController
 @RequestMapping("/student")
 public class StudentController {
